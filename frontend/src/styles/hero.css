@@ -1,0 +1,604 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 7vw 80px;
+
+    overflow: hidden;
+}
+
+.hero-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+.hero-glow-one {
+    width: 520px;
+    height: 520px;
+
+    right: 4%;
+    top: 14%;
+
+    background: rgba(255, 100, 40, 0.13);
+}
+
+.hero-glow-two {
+    width: 300px;
+    height: 300px;
+
+    left: -5%;
+    bottom: 5%;
+
+    background: rgba(255, 181, 91, 0.06);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 5vw;
+}
+
+.hero-copy {
+    max-width: 720px;
+}
+
+.hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    color: #ff9562;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.eyebrow-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #ff7842;
+
+    box-shadow:
+        0 0 15px #ff7842;
+}
+
+.hero-title {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(68px, 8vw, 125px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 600;
+}
+
+.hero-title-line {
+    display: block;
+
+    overflow: hidden;
+}
+
+.hero-title-line em {
+    color: #ff8249;
+    font-style: italic;
+}
+
+.hero-title-line strong {
+    font-weight: 600;
+}
+
+.hero-description {
+    max-width: 570px;
+
+    margin-top: 32px;
+
+    color: rgba(255, 255, 255, 0.56);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+.hero-search {
+    max-width: 610px;
+
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 32px;
+
+    padding: 7px 8px 7px 21px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+.hero-search>svg {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-search input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+.hero-search input::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.hero-search button {
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: #ff7c43;
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(255, 104, 45, 0.25);
+
+    transition: 0.25s ease;
+}
+
+.hero-search button:hover {
+    transform: scale(1.05);
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 22px;
+}
+
+.primary-cta {
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 22px;
+
+    border-radius: 14px;
+
+    background: #fff1e3;
+    color: #11100f;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.primary-cta:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(255, 255, 255, 0.08);
+}
+
+.secondary-cta {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    background: transparent;
+
+    font-size: 12px;
+}
+
+.play-button {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 45px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.hero-stats strong {
+    font-size: 19px;
+}
+
+.hero-stats span {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+}
+
+.hero-stats i {
+    width: 1px;
+    height: 28px;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual {
+    height: 650px;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.hero-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ring-large {
+    width: 640px;
+    height: 640px;
+}
+
+.ring-small {
+    width: 480px;
+    height: 480px;
+
+    border-color: rgba(255, 128, 72, 0.1);
+}
+
+.hero-food {
+    width: min(470px, 75%);
+
+    aspect-ratio: 1;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.hero-food img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 10px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.55),
+        0 0 80px rgba(255, 113, 48, 0.1);
+}
+
+.food-gradient {
+    position: absolute;
+
+    inset: 10px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(180deg,
+            transparent 50%,
+            rgba(0, 0, 0, 0.4));
+}
+
+.food-rating,
+.food-time {
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 14px;
+
+    border-radius: 14px;
+
+    background: rgba(18, 17, 15, 0.85);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.food-rating {
+    left: -6%;
+    bottom: 13%;
+}
+
+.rating-star {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    color: #16130e;
+
+    background: #ffc95d;
+}
+
+.food-rating strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.food-rating small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 8px;
+}
+
+.food-time {
+    top: 16%;
+    right: -4%;
+
+    color: #ff9b6b;
+
+    font-size: 11px;
+}
+
+.floating-ingredient {
+    position: absolute;
+
+    z-index: 8;
+
+    font-size: 31px;
+
+    filter:
+        drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.ingredient-one {
+    top: 13%;
+    right: 13%;
+}
+
+.ingredient-two {
+    top: 40%;
+    right: -1%;
+}
+
+.ingredient-three {
+    bottom: 14%;
+    left: 9%;
+}
+
+.ingredient-four {
+    bottom: 27%;
+    right: 5%;
+}
+
+.scroll-hint {
+    position: absolute;
+
+    left: 7vw;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    color: rgba(255, 255, 255, 0.25);
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+}
+
+.scroll-hint div {
+    width: 50px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        max-width: 800px;
+    }
+
+    .hero-visual {
+        height: 540px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        padding: 120px 6vw 70px;
+    }
+
+    .hero-title {
+        font-size: clamp(60px, 16vw, 95px);
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        height: 450px;
+    }
+
+    .hero-food {
+        width: 340px;
+    }
+
+    .ring-large {
+        width: 450px;
+        height: 450px;
+    }
+
+    .ring-small {
+        width: 370px;
+        height: 370px;
+    }
+
+    .food-rating {
+        left: 0;
+    }
+
+    .food-time {
+        right: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-search {
+        height: 58px;
+    }
+
+    .hero-search button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-stats {
+        gap: 12px;
+    }
+
+    .hero-stats strong {
+        font-size: 16px;
+    }
+
+    .hero-stats span {
+        font-size: 8px;
+    }
+
+    .hero-visual {
+        height: 360px;
+    }
+
+    .hero-food {
+        width: 270px;
+    }
+
+    .ring-large {
+        width: 350px;
+        height: 350px;
+    }
+
+    .ring-small {
+        width: 290px;
+        height: 290px;
+    }
+
+    .floating-ingredient {
+        font-size: 24px;
+    }
+}

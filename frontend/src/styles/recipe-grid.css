@@ -1,0 +1,17 @@
+/* =========================
+   RECIPE GRID
+========================= */
+
+.recipe-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+@media (max-width: 800px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
