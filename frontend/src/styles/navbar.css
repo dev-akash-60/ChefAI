@@ -49,8 +49,8 @@ a {
         #090909;
 }
 
-/* =========================
-   NAVBAR
+/* ========================= 
+   NAVBAR 
 ========================= */
 
 .navbar {
@@ -74,7 +74,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-
+    color: wheat;
     font-size: 21px;
     font-weight: 700;
     letter-spacing: -0.05em;
@@ -105,6 +105,7 @@ a {
     display: flex;
     align-items: center;
     gap: 32px;
+    
 }
 
 .navbar-links a {
@@ -116,6 +117,20 @@ a {
 .navbar-links a:hover,
 .navbar-links a.active {
     color: white;
+}
+.navbar-links .nav-link-button {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .ai-link {
@@ -147,6 +162,11 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.07);
 
     transition: 0.25s ease;
+}
+.meal-planner-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-icon:hover {
@@ -180,8 +200,8 @@ a {
     background: rgba(255, 255, 255, 0.06);
 }
 
-/* =========================
-   HERO
+/* ========================= 
+   HERO 
 ========================= */
 
 .hero {
@@ -480,8 +500,8 @@ a {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* =========================
-   HERO VISUAL
+/* ========================= 
+   HERO VISUAL 
 ========================= */
 
 .hero-visual {
@@ -674,8 +694,8 @@ a {
     background: rgba(255, 255, 255, 0.18);
 }
 
-/* =========================
-   SECTIONS
+/* ========================= 
+   SECTIONS 
 ========================= */
 
 .section {
@@ -733,8 +753,8 @@ a {
     font-size: 11px;
 }
 
-/* =========================
-   CATEGORIES
+/* ========================= 
+   CATEGORIES 
 ========================= */
 
 .category-grid {
@@ -802,8 +822,8 @@ a {
     color: rgba(255, 255, 255, 0.25);
 }
 
-/* =========================
-   RECIPES
+/* ========================= 
+   RECIPES 
 ========================= */
 
 .recipe-grid {
@@ -934,8 +954,8 @@ a {
     gap: 5px;
 }
 
-/* =========================
-   AI SECTION
+/* ========================= 
+   AI SECTION 
 ========================= */
 
 .ai-section {
@@ -1031,8 +1051,8 @@ a {
     transform: translateY(-3px);
 }
 
-/* =========================
-   AI ORB
+/* ========================= 
+   AI ORB 
 ========================= */
 
 .ai-orb-container {
@@ -1106,8 +1126,8 @@ a {
     color: #fff;
 }
 
-/* =========================
-   FOOTER
+/* ========================= 
+   FOOTER 
 ========================= */
 
 .footer {
@@ -1167,8 +1187,16 @@ a {
     font-size: 10px;
 }
 
-/* =========================
-   RESPONSIVE
+.nav-link-button {
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* ========================= 
+   RESPONSIVE 
 ========================= */
 
 @media (max-width: 1100px) {
@@ -1346,4 +1374,6 @@ a {
         flex-wrap: wrap;
         justify-content: center;
     }
+
 }
+

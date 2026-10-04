@@ -8,6 +8,7 @@ import {
     Search,
     Sparkles,
     Menu,
+    CalendarDays,
 } from "lucide-react";
 
 function Navbar() {
@@ -42,7 +43,12 @@ function Navbar() {
 
     return (
         <nav ref={navbarRef} className="navbar">
-            <a href="/" className="navbar-logo navbar-item">
+
+            {/* LOGO */}
+            <button
+                className="navbar-logo navbar-item nav-link-button"
+                onClick={() => navigate("/")}
+            >
                 <div className="logo-icon">
                     <ChefHat size={19} />
                 </div>
@@ -50,32 +56,74 @@ function Navbar() {
                 <span>
                     Chef<span>AI</span>
                 </span>
-            </a>
+            </button>
 
+
+            {/* NAVIGATION */}
             <div className="navbar-links">
-                <a href="#discover" className="navbar-item active">
+
+                {/* Discover */}
+                <button
+                    className="navbar-item nav-link-button"
+                    onClick={() => navigate("/")}
+                >
                     Discover
-                </a>
+                </button>
 
-                <a href="#recipes" className="navbar-item">
+
+                {/* Recipes */}
+                <button
+                    className="navbar-item nav-link-button"
+                    onClick={() => navigate("/recipes")}
+                >
                     Recipes
-                </a>
+                </button>
 
-                <a href="#categories" className="navbar-item">
-                    Categories
-                </a>
 
-                <a href="#ai-kitchen" className="navbar-item ai-link">
+                {/* Pantry */}
+                <button
+                    className="navbar-item nav-link-button"
+                    onClick={() => navigate("/pantry")}
+                >
+                    Pantry
+                </button>
+
+
+                {/* Meal Planner */}
+                <button
+                    className="navbar-item nav-link-button meal-planner-link"
+                    onClick={() => navigate("/meal-planner")}
+                >
+                    <CalendarDays size={14} />
+                    Meal Planner
+                </button>
+
+
+                <button
+                    className="navbar-item nav-link-button ai-link"
+                    onClick={() => navigate("/ai-kitchen")}
+                >
                     <Sparkles size={14} />
                     AI Kitchen
-                </a>
+                </button>
+
             </div>
 
+
+            {/* ACTIONS */}
             <div className="navbar-actions">
-                <button className="nav-icon navbar-item">
+
+                {/* Search */}
+                <button
+                    className="nav-icon navbar-item"
+                    onClick={() => navigate("/recipes")}
+                    aria-label="Search recipes"
+                >
                     <Search size={18} />
                 </button>
 
+
+                {/* Favorites */}
                 <button
                     className="nav-icon navbar-item"
                     onClick={() => navigate("/favorites")}
@@ -84,16 +132,26 @@ function Navbar() {
                     <Heart size={18} />
                 </button>
 
+
+                {/* Sign In */}
                 <button className="sign-in navbar-item">
                     Sign In
                 </button>
 
-                <button className="mobile-menu">
+
+                {/* Mobile Menu */}
+                <button
+                    className="mobile-menu"
+                    aria-label="Open menu"
+                >
                     <Menu size={21} />
                 </button>
+
             </div>
+
         </nav>
     );
 }
 
 export default Navbar;
+
