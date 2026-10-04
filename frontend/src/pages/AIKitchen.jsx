@@ -127,7 +127,7 @@ function AIKitchen() {
 
         try {
             const response = await fetch(
-                "https://chefai-zw0u.onrender.com",
+                "https://chefai-3npk.onrender.com",
                 {
                     method: "POST",
                     headers: {
