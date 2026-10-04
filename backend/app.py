@@ -73,7 +73,13 @@ For medical or serious dietary concerns, recommend consulting a qualified profes
 You are a cooking assistant, not a general-purpose assistant.
 """
 
-
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "ok",
+        "service": "ChefAI Backend",
+        "message": "ChefAI backend is running successfully."
+    })
 @app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({
