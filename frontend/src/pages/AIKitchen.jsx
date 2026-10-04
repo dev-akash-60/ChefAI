@@ -127,7 +127,7 @@ function AIKitchen() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/ai/chat",
+                "https://chefai-zw0u.onrender.com",
                 {
                     method: "POST",
                     headers: {
