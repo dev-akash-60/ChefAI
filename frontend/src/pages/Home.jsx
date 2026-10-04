@@ -23,12 +23,7 @@ function Home() {
             });
 
             timeline
-                .from(".navbar-item", {
-                    y: -25,
-                    opacity: 0,
-                    stagger: 0.08,
-                    duration: 0.7,
-                })
+                
                 .from(
                     ".hero-eyebrow",
                     {

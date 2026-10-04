@@ -53,13 +53,19 @@ a {
    NAVBAR 
 ========================= */
 
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 82px;
+
+    z-index: 1000;
 
     display: flex;
     align-items: center;
@@ -68,16 +74,33 @@ a {
     padding: 0 5vw;
 
     border-bottom: 1px solid transparent;
+
+    /* Important */
+    box-sizing: border-box;
 }
 
 .navbar-logo {
-    display: flex;
+    flex-shrink: 0;
+
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+
     gap: 10px;
+
     color: wheat;
+
     font-size: 21px;
     font-weight: 700;
+
     letter-spacing: -0.05em;
+
+    text-decoration: none;
+}
+
+.navbar-logo>span {
+    display: inline-flex;
+    align-items: center;
 }
 
 .navbar-logo>span>span {
@@ -87,6 +110,8 @@ a {
 .logo-icon {
     width: 39px;
     height: 39px;
+
+    flex-shrink: 0;
 
     display: grid;
     place-items: center;
@@ -101,92 +126,159 @@ a {
         0 8px 30px rgba(255, 103, 42, 0.2);
 }
 
+/* NAVIGATION LINKS */
+
 .navbar-links {
     display: flex;
     align-items: center;
+    justify-content: center;
+
     gap: 32px;
-    
+
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
 }
 
-.navbar-links a {
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 13px;
-    transition: color 0.25s ease;
-}
+.navbar-links>a,
+.navbar-links>button {
+    height: 100%;
 
-.navbar-links a:hover,
-.navbar-links a.active {
-    color: white;
-}
-.navbar-links .nav-link-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 3px;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
 
     color: rgba(255, 255, 255, 0.55);
 
+    font-family: "DM Sans", sans-serif;
     font-size: 13px;
     font-weight: 500;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
 
     transition:
         color 0.25s ease,
         transform 0.25s ease;
 }
 
-.ai-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    color: #ff9563 !important;
+.navbar-links>a:hover,
+.navbar-links>a.active,
+.navbar-links>button:hover {
+    color: #ffffff;
 }
 
+/* AI KITCHEN */
+
+.navbar-links .ai-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #ff9563;
+}
+
+.navbar-links .ai-link:hover {
+    color: #ffb08b;
+}
+
+/* RIGHT SIDE */
+
 .navbar-actions {
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+
     gap: 10px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .nav-icon {
     width: 40px;
     height: 40px;
 
+    flex-shrink: 0;
+
     display: grid;
     place-items: center;
 
+    margin: 0;
+    padding: 0;
+
     border-radius: 50%;
 
-    color: white;
+    color: #ffffff;
+
     background: rgba(255, 255, 255, 0.055);
 
     border: 1px solid rgba(255, 255, 255, 0.07);
 
-    transition: 0.25s ease;
-}
-.meal-planner-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
 .nav-icon:hover {
     background: rgba(255, 255, 255, 0.1);
+
     transform: translateY(-2px);
 }
 
 .sign-in {
-    margin-left: 6px;
+    flex-shrink: 0;
 
-    padding: 11px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
+    height: 40px;
+
+    margin: 0 0 0 6px;
+    padding: 0 20px;
+
+    border: none;
     border-radius: 999px;
 
     background: #fff2e4;
+
     color: #11100f;
 
+    font-family: "DM Sans", sans-serif;
     font-size: 12px;
     font-weight: 700;
+
+    white-space: nowrap;
+
+    cursor: pointer;
 }
+
+.sign-in:hover {
+    background: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+/* MOBILE */
 
 .mobile-menu {
     display: none;
@@ -194,10 +286,88 @@ a {
     width: 40px;
     height: 40px;
 
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 50%;
 
     color: white;
+
     background: rgba(255, 255, 255, 0.06);
+}
+
+/* Prevent any page-level button rules from changing navbar buttons */
+
+.navbar button {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1;
+}
+
+.navbar .nav-link-button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background: transparent;
+
+    line-height: 1;
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 4vw;
+    }
+
+    .navbar-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .navbar-links {
+        gap: 14px;
+    }
+
+    .navbar-actions {
+        gap: 7px;
+    }
+
+    .sign-in {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .navbar-links,
+    .nav-icon,
+    .sign-in {
+        display: none;
+    }
+
+    .navbar-actions {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
 }
 
 /* ========================= 
@@ -1376,4 +1546,5 @@ a {
     }
 
 }
+
 
